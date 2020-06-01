@@ -1,0 +1,170 @@
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+
+.fundo{
+    background-image: url("../Imagens/FotoG_lol.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 740px;
+}
+
+
+.header{
+    width: 100%;
+    height: 80px;
+    margin-top: 0.5%;
+    border-radius: 20px;
+    
+}
+
+.container{
+    /* max-width: 1280px; */
+    margin: 0 auto;
+}
+
+#fundo_logo {
+    width: 100%;
+}
+
+.logo {
+    width: 10%;
+    float: left;
+    margin-top: 1%;
+    margin-left: 2%;
+}
+
+.naveg {
+    float: left;
+    margin: 0 auto;
+    padding: 1%;
+}
+
+.naveg ul li{
+    display: inline-block;
+    margin-left: 40px;
+    font-size: 19px;
+}
+
+.esquerda{
+    margin-left: 250px;
+}
+
+.links {
+    color: white;
+    text-decoration: none;
+}
+
+.links_color:hover{
+    color:#DBA901;
+}
+
+.b_links{
+    border: none;
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 19px;
+}
+
+.espaco{
+    margin-left: 200px;
+}
+
+.saiba{
+    color: white;
+    text-align: center;
+    position: absolute;
+    float: left;
+    top: 55%;
+    left: 34%;
+}
+
+.saiba h3{
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.b_saiba{
+    border: none;
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    font-size: 20px;   
+}
+
+.fundo1{
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 450px;
+}
+
+.Logo_Riot{
+    height: 200px;
+    margin-left: 15%;
+    margin-top: 6%;
+    border: white 10px solid;
+}
+
+.texto1{
+    float: right;
+    color: white;
+    width: 50%;
+    margin-top: 8%;
+    margin-right: 5%;
+}
+
+.texto1 h4{
+    margin: 0;
+}
+
+.barra{
+    background-color: white;
+    width: 100%;
+    height: 3px;
+}
+
+.rodape{
+    background-color: black;
+    height: 80px;
+    width: 100%;
+}
+
+.textos ul li {
+    margin-right: 0;
+    margin-top: 25px;
+}
+
+.texto_rodape{
+    font-size: 14px;
+    color: white;
+    padding-left: 50px;
+}
+
+.esquerda1{
+    padding-left: 11%;
+}
+
+.copy{
+    padding-left: 6%;
+}
+
+.textos ul li{
+    display: inline-block;
+}
+
+.insta{
+    float: right;
+    height: 40px;
+    padding-left: 2%;
+    padding-top: 12px;
+}
+
+.direita{
+    padding-right: 40px;
+}
