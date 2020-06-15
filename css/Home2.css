@@ -114,12 +114,13 @@ body{
 .texto1{
     float: right;
     color: white;
-    width: 50%;
+    width: 40%;
     margin-top: 8%;
-    margin-right: 5%;
+    margin-right: 10%;
+    text-align: center;
 }
 
-.texto1 h4{
+.texto1 h3{
     margin: 0;
 }
 
