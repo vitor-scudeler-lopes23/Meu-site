@@ -53,7 +53,7 @@ body{
 }
 
 .esquerda{
-    margin-left: 340px;
+    margin-left: 250px;
 }
 
 .links {
@@ -72,15 +72,9 @@ body{
     font-size: 19px;
 }
 
-.b_links:hover{
-    background-color: #DBA901;
-}
-
 .espaco{
-    margin-left: 200px;
+    margin-left: 350px;
 }
-
-    /* HEADER */
 
 .saiba{
     color: white;
@@ -120,13 +114,12 @@ body{
 .texto1{
     float: right;
     color: white;
-    width: 40%;
+    width: 50%;
     margin-top: 8%;
-    margin-right: 10%;
-    text-align: center;
+    margin-right: 5%;
 }
 
-.texto1 h3{
+.texto1 h4{
     margin: 0;
 }
 

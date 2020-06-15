@@ -3,18 +3,12 @@ body{
     padding: 0;
     border: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: black;
-}
-
-.fundo{
-    background-image: url("../Imagens/FotoG_lol.jpg");
-    background-position: center;
+    background-image: url(../Imagens/Kayn.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-    height: 740px;
+    background-position: center;
+    background-attachment: fixed;
 }
-
 
 .header{
     width: 100%;
@@ -48,12 +42,12 @@ body{
 
 .naveg ul li{
     display: inline-block;
-    margin-left: 40px;
+    margin-left: 30px;
     font-size: 19px;
 }
 
-.esquerda{
-    margin-left: 340px;
+.direita1{
+    margin-right: 260px;
 }
 
 .links {
@@ -72,15 +66,9 @@ body{
     font-size: 19px;
 }
 
-.b_links:hover{
-    background-color: #DBA901;
-}
-
 .espaco{
-    margin-left: 200px;
+    margin-left: 350px;
 }
-
-    /* HEADER */
 
 .saiba{
     color: white;
@@ -120,14 +108,126 @@ body{
 .texto1{
     float: right;
     color: white;
-    width: 40%;
+    width: 50%;
     margin-top: 8%;
-    margin-right: 10%;
-    text-align: center;
+    margin-right: 5%;
 }
 
-.texto1 h3{
+.texto1 h4{
     margin: 0;
+}
+
+.barra{
+    background-color: #a68749;
+    width: 100%;
+    height: 3px;
+}
+
+.rodape{
+    background-color: black;
+    height: 80px;
+    width: 100%;
+}
+
+.textos ul li {
+    margin-right: 0;
+    margin-top: 25px;
+}
+
+.texto_rodape{
+    font-size: 14px;
+    color: white;
+    padding-left: 50px;
+}
+
+.esquerda1{
+    padding-left: 11%;
+}
+
+.copy{
+    padding-left: 6%;
+}
+
+.textos ul li{
+    display: inline-block;
+}
+
+.insta{
+    float: right;
+    height: 40px;
+    padding-left: 2%;
+    padding-top: 12px;
+}
+
+.direita1{
+    padding-right: 40px;
+}
+
+.conteudo{
+    color: #DBA901;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.anti{
+    float: left;
+    margin: 0;
+    margin-left: 250px;
+}
+
+.atu{
+    margin: 0;
+    margin-left: 950px;
+}
+
+.box_image{
+    width: 100%;
+    height: 400px;
+}
+
+.imagens{
+    width: 45%;
+    height: 400px;
+    margin-top: 0.5%;
+    margin-left: 28px;
+    float: left;
+}
+
+.imagens2{
+    width: 46%;
+    height: 400px;
+    float: right;
+    margin-top: 0.5%;
+    margin-right: 28px;
+}
+
+.box{
+    width: 80%;
+    height: 100px;
+    margin-left: 130px;
+    margin-top: 10px;
+    color: #FFFFFF;
+}
+
+.box h4{
+    margin: 0;
+}
+
+.texto{
+    text-align: center;
+    padding-top: 12px;
+}
+
+.jogo{
+    margin: 0;
+    font-size: 50px;
+    color: #DBA901;
+    text-align: center;
+    margin-bottom: 13px;
+}
+
+.img_esquerda{
+    margin-left: 28%;
 }
 
     /* RODAPE */
