@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>League info</title>
+    <script type="text/javascript" src="js/funcoes.js"></script>
     <link rel="stylesheet" href="css/Home2.css">
+    <title>League info</title>
 </head>
 <body>
     <div class="fundo">
@@ -15,8 +16,8 @@
                     <ul>
                     <li><a class="links links_color esquerda" href="Historia2.html">História</a></li>
                     <li><a class="links links_color" href="Times.html">Times</a></li>
-                    <li><a class="links links_color" href="Home2.html">Sobre nós</a></li>
-                    <li><button class="b_links espaco"><a class="links" href="home.html">Sair</a></button></li>
+                    <li><a class="links links_color" href="home2.html#sobre">Sobre nós</a></li>
+                    <li><button class="b_links espaco"><a class="links" href="#" onclick="logoff()">Sair</a></button></li>
                     </ul>
                 </div>
             </div>
@@ -24,7 +25,7 @@
     </div>
 <div class="fundo1">
     <img src="Imagens/Logo_Riot.png" class="Logo_Riot">
-    <div class="texto1"><h3>Nós da League Info, trazemos um pocuo da hístoria do League of Legends, para os apaixonados por este jogo, desde os iniciantes até os mais avançados, com informações em geral sobre as partidas</h3></div>
+    <div id="sobre" class="texto1"><h3>Nós da League Info, trazemos um pocuo da hístoria do League of Legends, para os apaixonados por este jogo, desde os iniciantes até os mais avançados, com informações em geral sobre as partidas</h3></div>
 </div>
     <div class="barra"></div>
 <div class="rodape">
@@ -42,3 +43,7 @@
 </div>
 </body>
 </html>
+<script>
+    verificar_autenticacao();
+
+</script>

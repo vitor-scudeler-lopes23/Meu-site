@@ -70,12 +70,35 @@ body{
     font-size: 19px;
 }
 
+.b_links:hover{
+    background-color: #DBA901;
+}
+
 .espaco{
     margin-left: 200px;
 }
 
     /* HEADER */
-
+    
+.error{
+    background-color: red;
+    margin-top: -29%;
+    margin-right: 35%;
+    width: 300px;
+    height: 100px;
+    border-radius: 10px;
+    border: 5px solid white;
+    float: right;
+    opacity: 85%;
+}
+    
+#texto{
+    text-align: center;
+    padding-top: 1.5%;
+    font-size: 22px;
+    color: white;
+}
+    /* ERRO */
 .box{
     height: 490px;
     width: 40%;

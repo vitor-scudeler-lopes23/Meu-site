@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/Login.css">
     <title>Login</title>
 </head>
+
 <body>
     <div class="fundo">
         <div class="header">
@@ -14,46 +16,51 @@
                 <div class="naveg">
                     <ul>
                         <li><a class="links links_color esquerda" href="Historia.html">História</a></li>
-                        <li><a class="links links_color" href="Home.html">Sobre nós</a></li>
+                        <li><a class="links links_color" href="home.html#sobre1">Sobre nós</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-            <div class="quadrado">
-                <h2>Iniciar sessão</h2>
-                    <form id="form_login" method="post" onsubmit="return entrar()">
-                        <label>
-                            <input name="login" class="caixas" type="text" placeholder="NOME DE USUÁRIO OU E-MAIL">
-                        </label>
-                        <label>
-                            <input name="senha" class="caixas espaco1" type="password" placeholder="SENHA">
-                        </label>
-                    <button class="login" type="submit"><span class="login_texto">Entrar</span></button>
-                </form>
-                <div>
-                    <a class="criar" href="Cadastro.html"><span>CRIAR CONTA</span></a>
-                    <a href="Problemas.html" class="criar problema">NÃO CONSEGUE FAZER LOGIN?</a>
-                </div>
+        <div class="quadrado">
+            <h2>Iniciar sessão</h2>
+            <form id="form_login" method="post" onsubmit="return verificar(), entrar()">
+                <label>
+                    <input id="usuario" name="login" class="caixas" type="text" placeholder="NOME DE USUÁRIO">
+                </label>
+                <label>
+                    <input id="senhas" name="senha" class="caixas espaco1" type="password" placeholder="SENHA">
+                </label>
+                <button class="login" type="submit"><span class="login_texto">Entrar</span></button>
+            </form>
+            <div>
+                <a class="criar" href="Cadastro.html"><span>CRIAR CONTA</span></a>
+                <a href="Problemas.html" class="criar problema">NÃO CONSEGUE FAZER LOGIN?</a>
             </div>
+        </div>
+        <div class="error" id="texto" style="display: none;"></div>
     </div>
-        <div class="barra"></div>
+    <div class="barra"></div>
     <div class="rodape">
         <div class="textos">
-           <ul>
-               <li class="texto_rodape copy">&copy; League info 2020</li>
-               <li class="texto_rodape esquerda1">Entre em contato conosco</li>
-               <li class="texto_rodape">Telefone: (11)94762-9353</li>
-               <li class="texto_rodape">E-mail: vitorlopes.scudeler@gmail.com</li>
-               <a href="https://www.instagram.com/riotgames/?hl=pt-br"><img src="Imagens/insta4.png" class="insta direita"></a>
-               <a href="https://www.facebook.com/RiotGames/"><img src="Imagens/face.png" class="insta"></a>
-               <a href="https://twitter.com/riotgames?lang=pt"><img src="Imagens/tw.png" class="insta"></a>
-           </ul>
-       </div>
-   </div>
+            <ul>
+                <li class="texto_rodape copy">&copy; League info 2020</li>
+                <li class="texto_rodape esquerda1">Entre em contato conosco</li>
+                <li class="texto_rodape">Telefone: (11)94762-9353</li>
+                <li class="texto_rodape">E-mail: vitorlopes.scudeler@gmail.com</li>
+                <a href="https://www.instagram.com/riotgames/?hl=pt-br"><img src="Imagens/insta4.png"
+                        class="insta direita"></a>
+                <a href="https://www.facebook.com/RiotGames/"><img src="Imagens/face.png" class="insta"></a>
+                <a href="https://twitter.com/riotgames?lang=pt"><img src="Imagens/tw.png" class="insta"></a>
+            </ul>
+        </div>
+    </div>
 </body>
+
 </html>
-<script>     
-function entrar() {
+<script>
+    let erros = [];
+    function entrar() {
+        event.preventDefault();
         var formulario = new URLSearchParams(new FormData(form_login));
         fetch("/usuarios/autenticar", {
             method: "POST",
@@ -82,4 +89,37 @@ function entrar() {
 
         return false;
     }
+
+    function verificar() {
+        event.preventDefault();
+
+        let login1 = (usuario.value);
+        let senha1 = (senhas.value);
+        texto.innerHTML = '';
+        erros = [];
+
+        if (login1.length == 0) {
+            erros.push('Nome inválido')
+        }
+        if (senha1.length == 0) {
+            erros.push('Senha inválida')
+        }
+        if (erros.length > 0) {
+            texto.style.display = 'block'
+
+            for (let contador = 0; contador < erros.length; contador++) {
+                texto.innerHTML += `${erros[contador]}<br>`
+            }
+        }
+        if (erros.length == 0) {
+            texto.style.display = 'none'
+
+            for (let contador = 0; contador < erros.length; contador++) {
+                texto.innerHTML += `${erros[contador]}<br>`
+            }
+        } else {
+            entrar()
+        }
+    }
+
 </script>

@@ -75,8 +75,28 @@ body{
 }
 
 
-/* HEADER */
+    /* HEADER */
 
+.error{
+    background-color: red;
+    margin-top: -21%;
+    margin-right: 5%;
+    width: 300px;
+    height: 80px;
+    border-radius: 10px;
+    border: 5px solid white;
+    float: right;
+    opacity: 85%;
+}
+    
+#texto{
+    text-align: center;
+    padding-top: 2%;
+    font-size: 22px;
+    color: white;
+}
+
+    /* ERRO */
 
 .quadrado{
     background-color: #f9f9f9;

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="js/funcoes.js"></script>
     <link rel="stylesheet" href="css/Times.css">
     <title>Document</title>
 </head>
@@ -14,11 +15,14 @@
                     <ul>
                         <li><a class="links links_color esquerda" href="Historia2.html">História</a></li>
                         <li><a class="links links_color" href="Times.html">Times</a></li>
-                        <li><a class="links links_color" href="Home2.html">Sobre nós</a></li>
-                        <li><button class="b_links espaco"><a class="links" href="home.html">Sair</a></button></li>
+                        <li><a class="links links_color" href="home2.html#sobre">Sobre nós</a></li>
+                        <li><button class="b_links espaco"><a class="links" href="#" onclick="logoff()">Sair</a></button></li>
                     </ul>
                 </div>
             </div>
         </div>
 </body>
 </html>
+<script>
+    verificar_autenticacao();
+</script>

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/Cadastro.css">
     <title>Cadastro</title>
 </head>
+
 <body>
     <div class="fundo">
         <div class="header">
@@ -14,50 +16,105 @@
                 <div class="naveg">
                     <ul>
                         <li><a class="links links_color esquerda" href="Historia.html">História</a></li>
-                        <li><a class="links links_color" href="Home.html">Sobre nós</a></li>
+                        <li><a class="links links_color" href="home.html#sobre1">Sobre nós</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-            <div class="quadrado">
-                <h2>Criar uma conta</h2>
-                    <form>
-                        <label>
-                            <input class="caixas" type="text" placeholder="NOME DE USUÁRIO">
-                        </label>
-                        <label>
-                            <input class="caixas espaco1" type="email" placeholder="INSIRA SEU E-MAIL">
-                        </label>
-                        <label>
-                            <input class="caixas espaco1" type="number" placeholder="INSIRA SEU TELEFONE">
-                        </label>
-                        <label>
-                            <input class="caixas espaco1" type="password" placeholder="SENHA">
-                        </label>
-                        <label>
-                            <input class="caixas espaco1" type="password" placeholder="CONFIRME SUA SENHA">
-                        </label>
-                    </form>
-                    <a href="Login.html"><button class="cadastro"><span class="cadastro_texto">Criar conta</span></button></a>
-                <div>
-                    <a class="entrar" href="Login.html">JA TENHO UMA CONTA</a>
-                    <a href="Problemas.html" class="entrar problema">NÃO CONSEGUE CRIAR UMA CONTA?</a>
-                </div>
+        <div class="quadrado">
+            <h2>Criar uma conta</h2>
+            <form onsubmit="verificar()">
+                <label>
+                    <input class="caixas" type="text" id="usuario" placeholder="NOME DE USUÁRIO">
+                </label>
+                <label>
+                    <input class="caixas espaco1" type="email" id="email" placeholder="INSIRA SEU E-MAIL">
+                </label>
+                <label>
+                    <input class="caixas espaco1" type="number" id="numero" placeholder="INSIRA SEU TELEFONE">
+                </label>
+                <label>
+                    <input class="caixas espaco1" type="password" id="senhas" placeholder="SENHA">
+                </label>
+                <label>
+                    <input class="caixas espaco1" type="password" id="senhas1" placeholder="CONFIRME SUA SENHA">
+                </label>
+                <button type="submit" class="cadastro"><span class="cadastro_texto">Criar conta</span></button>
+            </form>
+            <div>
+                <a class="entrar" href="Login.html">JA TENHO UMA CONTA</a>
+                <a href="Problemas.html" class="entrar problema">NÃO CONSEGUE CRIAR UMA CONTA?</a>
             </div>
+        </div>
+        <div class="error" id="texto" style="display: none;"></div>
     </div>
-        <div class="barra"></div>
+    <div class="barra"></div>
     <div class="rodape">
         <div class="textos">
-           <ul>
-               <li class="texto_rodape copy">&copy; League info 2020</li>
-               <li class="texto_rodape esquerda1">Entre em contato conosco</li>
-               <li class="texto_rodape">Telefone: (11)94762-9353</li>
-               <li class="texto_rodape">E-mail: vitorlopes.scudeler@gmail.com</li>
-               <a href="https://www.instagram.com/riotgames/?hl=pt-br"><img src="Imagens/insta4.png" class="insta direita"></a>
-               <a href="https://www.facebook.com/RiotGames/"><img src="Imagens/face.png" class="insta"></a>
-               <a href="https://twitter.com/riotgames?lang=pt"><img src="Imagens/tw.png" class="insta"></a>
-           </ul>
-       </div>
-   </div>
+            <ul>
+                <li class="texto_rodape copy">&copy; League info 2020</li>
+                <li class="texto_rodape esquerda1">Entre em contato conosco</li>
+                <li class="texto_rodape">Telefone: (11)94762-9353</li>
+                <li class="texto_rodape">E-mail: vitorlopes.scudeler@gmail.com</li>
+                <a href="https://www.instagram.com/riotgames/?hl=pt-br"><img src="Imagens/insta4.png"
+                        class="insta direita"></a>
+                <a href="https://www.facebook.com/RiotGames/"><img src="Imagens/face.png" class="insta"></a>
+                <a href="https://twitter.com/riotgames?lang=pt"><img src="Imagens/tw.png" class="insta"></a>
+            </ul>
+        </div>
+    </div>
 </body>
+
 </html>
+<script>
+    let erros = [];
+    function verificar() {
+        event.preventDefault();
+
+        let login = (usuario.value);
+        let e_mail = (email.value);
+        let telefone = (numero.value);
+        let senha = (senhas.value);
+        let senha_confirme = (senhas1.value);
+        texto.innerHTML = '';
+        erros = [];
+
+
+        if (login.length == 0) {
+            erros.push('Nome inválido')
+        }
+
+        if (e_mail.indexOf('@') == -1 || e_mail.indexOf('.com') == -1 || !e_mail) {
+            erros.push('E-mail inválido')
+        }
+
+        if (telefone.length < 9) {
+            erros.push('Telefone inválido')
+        }
+
+        if (senha.length == 0) {
+            erros.push('Senha inválida')
+        }
+
+        if (senha_confirme.length == 0) {
+            erros.push('Confirme sua senha')
+        }
+
+        if (erros.length > 0) {
+            texto.style.display = 'block'
+
+            for (let contador = 0; contador < erros.length; contador++) {
+                texto.innerHTML += `${erros[contador]}<br>`
+            }
+        }
+        if (erros.length == 0) {
+            texto.style.display = 'none'
+            alert(`Obrigado ${login} por se cadastrar em nosso site!!`)
+            window.location.assign("login.html")
+
+            for (let contador = 0; contador < erros.length; contador++) {
+                texto.innerHTML += `${erros[contador]}<br>`
+            }
+        }
+    }
+</script>
