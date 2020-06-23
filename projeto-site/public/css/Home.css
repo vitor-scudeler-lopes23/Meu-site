@@ -132,49 +132,49 @@ body{
 
     /* RODAPE */
 
-    .barra{
-        background-color: #a68749;
-        width: 100%;
-        height: 3px;
-    }
+.barra{
+    background-color: #a68749;
+    width: 100%;
+    height: 3px;
+}
     
-    .rodape{
-        background-color: black;
-        height: 100px;
-        width: 100%;
-        margin-top: -16px;
-    }
+.rodape{
+    background-color: black;
+    height: 100px;
+    width: 100%;
+    margin-top: -16px;
+}
     
-    .textos ul li {
-        margin-right: 0;
-        margin-top: 43px;
-    }
+.textos ul li {
+    margin-right: 0;
+    margin-top: 43px;
+}
     
-    .texto_rodape{
-        font-size: 14px;
-        color: white;
-        padding-left: 50px;
-    }
+.texto_rodape{
+    font-size: 14px;
+    color: white;
+    padding-left: 50px;
+}
     
-    .esquerda1{
-        padding-left: 11%;
-    }
+.esquerda1{
+    padding-left: 11%;
+}
     
-    .copy{
-        padding-left: 6%;
-    }
+.copy{
+    padding-left: 6%;
+}
     
-    .textos ul li{
-        display: inline-block;
-    }
+.textos ul li{
+    display: inline-block;
+}
     
-    .insta{
-        float: right;
-        height: 40px;
-        padding-left: 2%;
-        padding-top: 30px;
-    }
+.insta{
+    float: right;
+    height: 40px;
+    padding-left: 2%;
+    padding-top: 30px;
+}
     
-    .direita{
-        padding-right: 40px;
-    }
+.direita{
+    padding-right: 40px;
+}
